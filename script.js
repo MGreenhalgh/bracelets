@@ -24,7 +24,7 @@ const Check = () => {
     for (let i = 0; i < songs.length; i++) {
         let word = songs[i];
         var letterCount = 0
-        var wordCopy = word.toLowerCase().replace(/\W/g, '');
+        var wordCopy = word.split("(")[0].toLowerCase().replace(/\W/g, '');
         var wordLength = wordCopy.length
         if (charString.length < wordCopy.length) continue
         for (let j = 0; j < charString.length; j++) {
