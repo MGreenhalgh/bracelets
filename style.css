@@ -28,7 +28,7 @@ body {
 }
 
 body {
-    padding-top: 10px;
+    padding: 1vw;
     color: var(--textColor);
     background: var(--backgroundColor);
     font-size: large;
@@ -59,12 +59,11 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 2%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #resultsHolder {
@@ -74,24 +73,38 @@ header {
     align-items: center;
     flex-direction: column;
     font-size: 40px;
-    text-align: center;
 }
 
 #results {
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin: 50px 0;
-    font-size: 50px;
     font-weight: bold;
 }
 
 .result {
+    display: flex;
+    align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
-span {
-    margin-bottom: 10px;
-    text-align: center;
+.removeButton {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: crimson;
+    border: none;
+    border-radius: 3px;
+    font-size: large;
+    background-image: url(x.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    #resultsHolder {
+        font-size: 20px;
+    }
 }
