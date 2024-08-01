@@ -65,9 +65,8 @@ const Check = () => {
 const Remove = (str) => {
     if (!confirm("Remove the letters " + str + "?")) return
 
-    let charString = document.getElementById("charInput").value
+    let charString = document.getElementById("charInput").value.toLowerCase()
     for (let i = 0; i < str.length; i++) {
-        const element = str[i];
         if (charString.includes(str[i])) {
             let letterPos = charString.indexOf(str[i])
             charString = charString.slice(0, letterPos).concat(charString.slice(letterPos + 1))
